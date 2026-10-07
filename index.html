@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sunflowers Icon 🌻</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+  <!-- ======================================
+       FLOATING DECORATIONS
+  ======================================= -->
+
+  <div id="particles"></div>
+
+
+  <!-- ======================================
+       PIN LOCK
+  ======================================= -->
+
+  <div id="lockScreen">
+
+    <div class="lock-glow"></div>
+
+    <div class="lock-card">
+
+      <div class="sunflower-icon">🌻</div>
+
+      <span class="tiny-label">
+        A LITTLE SECRET PLACE
+      </span>
+
+      <h1>Just For You</h1>
+
+      <p>
+        Enter our secret code to open<br>
+        this little world I made for you.
+      </p>
+
+      <div class="pin-dots" id="pinDots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <input
+        id="pinInput"
+        type="password"
+        inputmode="numeric"
+        maxlength="6"
+        autocomplete="off"
+        placeholder="Enter PIN"
+      >
+
+      <button id="unlockBtn">
+        Open My Heart
+        <span>♡</span>
+      </button>
+
+      <p id="errorMessage"></p>
+
+      <div class="lock-footer">
+        made with love • just for you
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ======================================
+       MAIN WEBSITE
+  ======================================= -->
+
+  <main id="mainContent">
+
+
+    <!-- ====================================
+         MUSIC
+    ===================================== -->
+
+    <audio id="backgroundMusic" loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" class="music-button">
+      <span id="musicIcon">♫</span>
+      <span id="musicText">Music</span>
+    </button>
+
+
+    <!-- ====================================
+         HERO
+    ===================================== -->
+
+    <section class="hero">
+
+      <div class="sun-glow"></div>
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          🌻 FOR THE GIRL WHO MAKES MY WORLD BRIGHTER
+        </span>
+
+        <h1>
+          Welcome,<br>
+          <span>My Love</span>
+        </h1>
+
+        <p class="hero-description">
+          I created this little place on the internet
+          because some feelings are too beautiful
+          to keep only in my heart.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#letter" class="gold-button">
+            Read My Letter
+            <span>↓</span>
+          </a>
+
+          <a href="#memories" class="outline-button">
+            Our Memories
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div></div>
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         LOVE LETTER
+    ===================================== -->
+
+    <section id="letter" class="section">
+
+      <div class="section-heading">
+
+        <span>01 • A LETTER FOR YOU</span>
+
+        <h2>
+          Words From<br>
+          <em>My Heart</em>
+        </h2>
+
+      </div>
+
+      <div class="letter-wrapper">
+
+        <div class="letter-decoration">
+          ✦
+        </div>
+
+        <article class="love-letter">
+
+          <div class="letter-top">
+            <span>To my favorite person/enemy,</span>
+            <span>♡</span>
+          </div>
+
+          <div id="typedLetter"></div>
+
+          <div class="letter-signature">
+            <span>Forever yours,</span>
+            <strong>Bammmmyyy♡</strong>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         MEMORIES
+    ===================================== -->
+
+    <section id="memories" class="section memories-section">
+
+      <div class="section-heading centered">
+
+        <span>02 • OUR MEMORIES</span>
+
+        <h2>
+          Little Moments,<br>
+          <em>Big Memories</em>
+        </h2>
+
+        <p>
+          Add the pictures that make you smile.
+          Turn this page into our own little album.
+        </p>
+
+      </div>
+
+
+      <div class="polaroid-gallery" id="gallery">
+
+        <!-- Example cards -->
+
+        <div class="empty-gallery">
+
+          <div>📷</div>
+
+          <h3>Our memories belong here</h3>
+
+          <p>
+            Add your favorite photos below.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="upload-area">
+
+        <label
+          for="photoInput"
+          class="gold-button upload-button"
+        >
+          ＋ Add Our Pictures
+        </label>
+
+        <input
+          id="photoInput"
+          type="file"
+          accept="image/*"
+          multiple
+          hidden
+        >
+
+        <small>
+          Choose as many photos as you want ♡
+        </small>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         OUR STORY
+    ===================================== -->
+
+    <section id="story" class="section story-section">
+
+      <div class="section-heading">
+
+        <span>03 • OUR STORY</span>
+
+        <h2>
+          From Then<br>
+          <em>To Now</em>
+        </h2>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">🌱</div>
+
+          <div class="timeline-card">
+
+            <span>THE BEGINNING</span>
+
+            <h3>When We First Met</h3>
+
+            <p>
+              Dati sa inuman lang hanggang sa umabot na sa kung saan
+              saan HAHHAHAHAH
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">🌻</div>
+
+          <div class="timeline-card">
+
+            <span>A BEAUTIFUL CHAPTER</span>
+
+            <h3>When I Fell For You</h3>
+
+            <p>
+              Maybe it was your smile.
+              Maybe it was your laugh.
+              Maybe I simply realized that
+              being around you felt like home.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">✨</div>
+
+          <div class="timeline-card">
+
+            <span>TODAY</span>
+
+            <h3>Still Choosing You</h3>
+
+            <p>
+              Kahit ang daming naging mali mo at ko i dont know pero 
+              still love you parin eh pero sana hanggang ganito muna 
+              secret lang muna tong Relationship natin.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         SUNSET / NIGHT
+    ===================================== -->
+
+    <section class="sunset-section">
+
+      <div class="moon"></div>
+
+      <div class="stars"></div>
+
+      <div class="sunset-content">
+
+        <span>04 • OUR LITTLE UNIVERSE</span>
+
+        <h2>
+          Even on the<br>
+          <em>darkest nights</em>
+        </h2>
+
+        <p>
+          I'd still choose you as my favorite light.
+        </p>
+
+        <div class="sunflower-row">
+          🌻 ✦ 🌻 ✦ 🌻
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         FINAL SURPRISE
+    ===================================== -->
+
+    <section class="final-section">
+
+      <div class="final-card">
+
+        <div class="final-flower">
+          🌻
+        </div>
+
+        <span class="tiny-label">
+          ONE LAST THING
+        </span>
+
+        <h2>
+          I Have A<br>
+          <em>Question</em>
+        </h2>
+
+        <p>
+          Are you ready to see how much
+          you mean to me?
+        </p>
+
+        <button
+          id="surpriseButton"
+          class="gold-button"
+        >
+          Open Your Surprise ✨
+        </button>
+
+        <div id="finalMessage">
+
+          <div class="big-heart">
+            💛
+          </div>
+
+          <h3>
+            I LOVE YOU.
+          </h3>
+
+          <p>
+            Thank you for being one of the
+            most beautiful parts of my life.
+            <br><br>
+            Siguro hindi man sa ngayon pero andito parin po ako.
+            <br><br>
+            <strong>
+              You will always have a special
+              place in my heart. 🌻
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         FOOTER
+    ===================================== -->
+
+    <footer>
+
+      <div class="footer-flower">
+        🌻
+      </div>
+
+      <p>
+        Made with love, sunshine & a little bit of magic.
+      </p>
+
+      <span>
+        Our Secret Relationship
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
